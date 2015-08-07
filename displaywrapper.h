@@ -3,6 +3,7 @@
 
 #include <QStringList>
 #include <QWidget>
+#include <QTextStream>
 
 #ifdef Q_OS_WIN32
 #include <Windows.h>

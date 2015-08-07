@@ -21,20 +21,20 @@ unix: {
 win32: {
     TARGET = ../bin/jag
 
-    INCLUDEPATH += winlibs/SDL-1.2.15/include \
-        winlibs/SDL_mixer-1.2.8
+    INCLUDEPATH += ../winlibs/SDL-1.2.15/include \
+        ../winlibs/SDL_mixer-1.2.12
 
   mingw*:{
-    LIBS += -Lwinlibs/SDL-1.2.15/lib/mingw \
-        -Lwinlibs/SDL_mixer-1.2.8/lib
+    LIBS += -L../winlibs/SDL-1.2.15/lib/mingw \
+        -L../winlibs/SDL_mixer-1.2.12/lib
 
-    LIBS += $$PWD"/winlibs/SDL-1.2.15/lib/mingw/libSDL.dll.a"
-    LIBS += $$PWD"/winlibs/SDL_mixer-1.2.8/lib/libSDL_mixer.a"
+    LIBS += $$PWD"/../winlibs/SDL-1.2.15/lib/mingw/libSDL.dll.a"
+    LIBS += $$PWD"/../winlibs/SDL_mixer-1.2.12/lib/mingw/libSDL_mixer.a"
   }
 
   msvc*:{
-    LIBS += $$PWD"/winlibs/SDL-1.2.15/lib/x86/SDL.lib"
-    LIBS += $$PWD"/winlibs/SDL_mixer-1.2.8/lib/SDL_mixer.lib"
+    LIBS += $$PWD"\..\winlibs\SDL-1.2.15\lib\x86\SDL.lib"
+    LIBS += $$PWD"\..\winlibs\SDL_mixer-1.2.12\lib\x86\SDL_mixer.lib"
   }
 
     RC_FILE = res.rc

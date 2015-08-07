@@ -1,6 +1,8 @@
 #include "displaywrapper.h"
 
 #include <QDesktopWidget>
+#include <QFile>
+#include <QProcess>
 
 DisplayWrapper DisplayWrapper::dwrapper;
 
