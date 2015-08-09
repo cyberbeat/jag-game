@@ -52,7 +52,7 @@ GameScene::GameScene(QWidget *parent) :
   yoff = 10;
 
   advanceTimer = new QTimer(this);
-  advanceTimer->setInterval(30);
+  advanceTimer->setInterval(25);
   connect(advanceTimer, SIGNAL(timeout()), this, SLOT(nextCycle()));
 
   timeTimer = new QTimer(this);

@@ -21,18 +21,18 @@ unix: {
 win32: {
     TARGET = ../bin/jag
 
-    INCLUDEPATH += ../winlibs/SDL-1.2.15/include \
-        ../winlibs/SDL_mixer-1.2.12
-
   mingw*:{
-    LIBS += -L../winlibs/SDL-1.2.15/lib/mingw \
-        -L../winlibs/SDL_mixer-1.2.12/lib
+    INCLUDEPATH += ../winlibs/SDL-1.2.15/include \
+        ../winlibs/SDL_mixer-1.2.8
 
-    LIBS += $$PWD"/../winlibs/SDL-1.2.15/lib/mingw/libSDL.dll.a"
-    LIBS += $$PWD"/../winlibs/SDL_mixer-1.2.12/lib/mingw/libSDL_mixer.a"
+    LIBS += $$PWD"/../winlibs/SDL-1.2.15/lib/libSDL.dll.a"
+    LIBS += $$PWD"/../winlibs/SDL_mixer-1.2.8/lib/libSDL_mixer.a"
   }
 
   msvc*:{
+    INCLUDEPATH += ../winlibs/SDL-1.2.15/include \
+        ../winlibs/SDL_mixer-1.2.12
+
     LIBS += $$PWD"\..\winlibs\SDL-1.2.15\lib\x86\SDL.lib"
     LIBS += $$PWD"\..\winlibs\SDL_mixer-1.2.12\lib\x86\SDL_mixer.lib"
   }

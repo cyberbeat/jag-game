@@ -1,8 +1,9 @@
 JAG: Freeware crossplatform 2D arcade-puzzle game
 
-version 0.3.2
+version 0.3.3
 
 XlabSoft & Industrial Infosystems 2009-2012
+Sintegrial Technologies 2012-2015
 
 ----------------------------------------------------------------------------------
 LICENSE
@@ -20,11 +21,11 @@ JAG was created using only free development software and free resources.
 ----------------------------------------------------------------------------------
 SUPPORTED PLATFORMS
 
-Since JAG is based on Qt4/SDL frameworks, all the platforms supported by them 
+Since JAG is based on Qt/SDL frameworks, all the platforms supported by them
 should be able to build and launch the game.
 
 In particular:
-- MS Windows 7, Vista, XP
+- MS Windows XP - 10
 - All Linux OS
 - FreeBSD
 
@@ -42,6 +43,13 @@ http://jag.xlabsoft.com
 
 ---------------------------------------------------------------------------------
 CHANGELOG
+
+0.3.3
+
+- game ported to Qt5
+- fixed issues with obstructed dialog texts
+- UI reworked a little
+
 
 0.3.2
 
