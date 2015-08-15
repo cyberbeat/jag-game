@@ -90,9 +90,16 @@ void GameWidget::closeEvent(QCloseEvent *event)
 
 void GameWidget::drawBackground ( QPainter * painter, const QRectF & rect )
 {
-  painter->fillRect(rect, Qt::black);
+    if (gameProfile->isAccelerated())
+        painter->setCompositionMode(QPainter::RasterOp_SourceOrDestination);
 
-  scene->drawBackground(painter, rect);
+    painter->fillRect(rect, Qt::black);
+
+    scene->drawBackground(painter, rect);
+}
+
+void GameWidget::drawForeground(QPainter *painter, const QRectF &rect)
+{
 }
 
 void GameWidget::keyPressEvent ( QKeyEvent * keyEvent )

@@ -23,8 +23,8 @@ void GameScene::drawBackground(QPainter *painter, const QRectF &)
     return;
 
   QPainter &p(*painter);
-  p.setRenderHint(QPainter::Antialiasing);
-  p.setRenderHint(QPainter::TextAntialiasing);
+//  p.setRenderHint(QPainter::Antialiasing);
+//  p.setRenderHint(QPainter::TextAntialiasing);
 
   paintState = true;
 
@@ -34,10 +34,6 @@ void GameScene::drawBackground(QPainter *painter, const QRectF &)
   {
     // background
     p.drawPixmap(0,0, gameStock->MenuBackground);
-
-    //QTimer::singleShot(200, this, SLOT(update()));
-
-//    p.setOpacity(1);
     p.drawPixmap(LEFT_CENTER(gameStock->GameLogoBig.width(),WIDTH),
                  10,
                  gameStock->GameLogoBig
@@ -125,8 +121,6 @@ void GameScene::drawBackground(QPainter *painter, const QRectF &)
             if (state != GameTool::ToolOutOfRange)
             {
               p.setPen(QPen(Qt::white, 2, Qt::DotLine));
-  //            p.setOpacity(0.5);
-  //            p.drawRect(col2x(j), row2y(i), 56, 56);
               p.setOpacity(0.3);
               p.setBrush(state & GameTool::ToolActive ? Qt::blue : Qt::red);
     #if QT_VERSION >= 0x040400

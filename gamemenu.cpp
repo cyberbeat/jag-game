@@ -120,14 +120,12 @@ void MenuWidget::updateHallOfFame()
     }
 }
 */
+
 void MenuWidget::onCurrentChanged(int)
 {
     int dy = HEIGHT < 700 ? Y48 : DY(150);
 
-    //if (gameProfile->isGameStarted())
-        move((WIDTH-width())/2, dy);
-    //else
-    //    move(/*WIDTH-width()-*/DX(50), Y48);
+    move((WIDTH-width())/2, dy);
 }
 
 QString MenuWidget::selectedLevelPack()
@@ -192,8 +190,6 @@ int ConfirmDialog::exec(const QString &qs)
     text->setText(qs);
 
     show();
-
-    setMinimumSize(qMax(width(), text->width() + 20), qMax(height(), text->height() * 2));
     adjustSize();
     QApplication::processEvents();
 

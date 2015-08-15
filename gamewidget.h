@@ -13,7 +13,7 @@ class GameWidget : public QGraphicsView
 
 public:
     GameWidget(const QString &respath, QWidget *parent = 0);
-    ~GameWidget();
+    virtual ~GameWidget();
 
     static const QString& getResourcePath() { return resourcePath; }
 
@@ -26,6 +26,7 @@ protected:
 
 private:
     void drawBackground(QPainter *painter, const QRectF &rect);
+    void drawForeground(QPainter *painter, const QRectF &rect);
     void keyPressEvent(QKeyEvent *keyEvent);
     void focusOutEvent(QFocusEvent *event);
 
